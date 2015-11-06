@@ -1,0 +1,14 @@
+#container
+	#logo
+		%img{:src => "#{gulp_asset_path('images/logo.png')}"}
+	%hr
+	%label{:for => "toggle"}
+		%span
+		%span
+		%span
+	%input#toggle{:type => "checkbox"}
+	= render 'layouts/header'
+	#red_box
+		#content
+			%h1 Bas van Straaten
+			%h1 ID Student TU/E 

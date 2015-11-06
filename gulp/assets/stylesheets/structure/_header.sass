@@ -1,0 +1,76 @@
+#container > input
+	display: none
+	position: absolute
+	&:checked + nav
+		height: 437px
+		ul		
+			position: absolute
+			width: 100%
+			height: calc(100% - 74px)
+			bottom: 0
+			left: 0
+			right: 0
+			flex-wrap: wrap
+nav
+	transition: .8s ease-in-out
+	height: 74px
+	position: relative
+	overflow: hidden
+	ul
+		padding: 0
+		margin: 0 auto
+		width: 600px
+		height: 100%
+		list-style: none
+		display: flex
+		align-items: center
+		justify-content: space-between
+		position: relative
+		text-transform: uppercase	
+		@media screen and (max-width: $iPad)
+			width: 95%
+		@media screen and (max-width: $iPad2)
+			border-top: 1px solid $hrColor	
+			position: absolute
+			width: 100%
+			top: 75px
+			bottom: 0
+			left: 0
+			right: 0
+			display: block
+			li
+				width: 100%
+				height: 60px
+				a
+					width: 100%
+					height: 100%
+					line-height: 60px
+				a.active:before
+					visibility: hidden
+		li
+			text-align: center
+			a
+				display: inline-block
+				font-size: .8rem
+				color: $textColor
+				text-decoration: none
+				letter-spacing: .1rem
+				font-weight: 100
+				position: relative
+			a:before
+				content: " "
+				position: absolute
+				width: 100%
+				bottom: -1px
+				left: 0px
+				height: .5px
+				background-color: $textColor
+				transition: .2s ease-in-out
+				transform: scaleX(0)
+				visibility: hidden
+				@media screen and (max-width: $iPad2)
+					display: none
+			a:hover:before, a.active:before
+				visibility: visible
+				transform: scaleX(1)
+				

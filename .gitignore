@@ -10,8 +10,7 @@ capybara-*.html
 /coverage/
 /spec/tmp
 /node_modules
-/app/assets/*/compiled/
-/public/assets/*
+
 
 **.orig
 rerun.txt

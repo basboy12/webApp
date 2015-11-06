@@ -12,6 +12,7 @@ module.exports = {
     src: sourceFiles + "/stylesheets/**/*.{sass,scss}",
     dest: publicAssets + "/stylesheets",
     settings: {
+      outputStyle: 'compressed',
       indentedSyntax: true, // Enable .sass syntax!
       imagePath: '/assets/images' // Used by the image-url helper
     }

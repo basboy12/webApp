@@ -3,10 +3,30 @@
 	%head
 		%title Bas van Straaten 
 		%meta{:name => "viewport", :content => "initial-scale=1.0"}
+		= render 'layouts/metatags'
 		= render 'layouts/favicons'
 		= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
 		= csrf_meta_tags
 	%body
-		= yield
+		#container
+			#logo
+				%img{:src => "#{gulp_asset_path('images/logo.png')}"}
+			%hr
+			%label{:for => "toggle"}
+				%span
+				%span
+				%span
+			%input#toggle{:type => "checkbox"}
+			= render 'layouts/header'
+			= yield
+			/ #social_box
+			/ 	%a.icon.facebook{:href =>""} 
+			/ 		%img{:src => "#{gulp_asset_path('icons/facebook.svg')}"}
+			/ 	%a.icon.youtube{:href =>""}
+			/ 		%img{:src => "#{gulp_asset_path('icons/youtube.svg')}"}
+			/ 	%a.icon.behance{:href =>""}
+			/ 		%img{:src => "#{gulp_asset_path('icons/behance.svg')}"}
+			/ 	%a.icon.instagram{:href =>""}
+			/ 		%img{:src => "#{gulp_asset_path('icons/instagram.svg')}"}
 
 		= javascript_include_tag 'application', 'data-turbolinks-track' => true

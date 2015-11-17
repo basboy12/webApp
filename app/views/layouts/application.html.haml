@@ -1,8 +1,9 @@
 !!!
-%html
+%html{:lang => "en"}
 	%head
-		%title Bas van Straaten 
+		%meta{:charset => "UTF-8"}
 		%meta{:name => "viewport", :content => "initial-scale=1.0"}
+		%title Bas van Straaten 
 		= render 'layouts/metatags'
 		= render 'layouts/favicons'
 		= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
